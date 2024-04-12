@@ -1,0 +1,74 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+.change {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.change .btn1 {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  border: 2px solid rgb(62, 177, 205);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.today{
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.week{
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #6397ce;
+  color:black;
+  font-size: 600;
+  transition: transform 0.3s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+  background-color: white;
+  color: black;
+  margin-top: 40px;
+}

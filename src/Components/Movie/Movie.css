@@ -1,0 +1,73 @@
+.movies{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+.choose {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  gap: 14px;
+}
+.choose h2 {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.choose select {
+  padding: 8px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; 
+  background-color: #fefcfc; 
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="black"><path d="M7 10l5 5 5-5z" /></svg>'); /* Custom dropdown arrow */
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 8px); 
+  background-position-y: center;
+  padding-right: 24px; 
+  cursor: pointer; 
+}
+
+.choose select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  cursor: pointer;
+}
+.movie{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  margin-top: 40px;
+}
+.pagi{
+  width: 100%;
+  margin-left: 90px;
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width:500px){
+    .choose{
+     margin-left: 10px;
+      font-size: 20px;
+    }
+    .choose h2 {
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+    .pagi{
+      margin-left: 29px;
+    }
+}
