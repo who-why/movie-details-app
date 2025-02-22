@@ -1,13 +1,13 @@
 import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-import Home from './components/Home/Home'
-import Movie from './components/Movie/Movie'
-import Tvshow from './components/Tvshow/Tvshow'
+import Navbar from './Components/Navbar/Navbar'
+import Home from './Components/Home/Home'
+import Movie from './Components/Movie/Movie'
+import Tvshow from './Components/Tvshow/Tvshow'
 import {BrowserRouter as Router , Routes ,Route} from 'react-router-dom'
 
 import './App.css'
-import Details from './components/Details/Details'
-import Search from './components/Search/Search'
+import Details from './Components/Details/Details'
+import Search from './Components/Search/Search'
 
 const App = () => {
   return (

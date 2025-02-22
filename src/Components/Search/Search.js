@@ -3,6 +3,7 @@ import './Search.css'
 import { searchData } from '../services/api';
 import Card from '../Card/Card';
 import PaginationComponent from '../PaginationComponent';
+import Loading from '../Loading';
 
 const Search = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -30,7 +31,11 @@ const Search = () => {
   const handleSearch = (e) => {
     setSearchValue(tempSearchValue);
   };
+  
 
+  if(isLoading){
+    <Loading/>
+  }
   return (
     <div className='search'>
            <div className="search-box">

@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Card from '../Card/Card';
 import { fetchTrending } from '../services/api';
+import Loading from '../Loading';
 
 const Home = () => {
   const [selected, setSelected] = useState('today');
   const leftOffset = selected === 'week' ? '50%' : '0';
   const [data, setData] = useState([]);
   const [timeWindow, setTimeWindow] = useState("day");
+  const [isLoading, setIsLoading] = useState(true);
 
 
   const handleClick = (value) => {
@@ -15,17 +17,21 @@ const Home = () => {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     fetchTrending(timeWindow)
       .then((res) => {
         setData(res);
       })
       .catch((err) => {
         console.error("Error fetching data:", err);
-      });
+      }).finally(() => setIsLoading(false));
   }, [timeWindow]);
 
   console.log(data, "data");
-
+   
+  if(isLoading){
+      return <Loading/>
+  }
   return (
     <div className='home'>
       <div className='change'>

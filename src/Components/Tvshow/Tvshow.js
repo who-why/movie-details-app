@@ -4,6 +4,7 @@ import './Tvshow.css'
 import { fetchMovies, fetchTvSeries } from '../services/api';
 import Card from '../Card/Card';
 import PaginationComponent from '../PaginationComponent';
+import Loading from '../Loading';
 
 const Tvshow = () => {
 
@@ -26,7 +27,9 @@ const Tvshow = () => {
       .finally(() => setIsLoading(false));
   }, [activePage,sortBy]);
 
-
+   if(isLoading){
+      return <Loading/>
+   }
 
   return (
     <div className='movies'>
